@@ -1,0 +1,105 @@
+
+// ======= Header =======
+
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-mob__burg-btn {
+    padding: 10px 0;
+    cursor: pointer;
+    margin-right: 70px;
+  }
+  
+  .header-mob__burg {
+    position: relative;
+    width: 30px;
+    height: 4px;
+    background-color: $main-font-color;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in;
+      &:before {
+        position: absolute;
+        left: 0;
+        top: -8px;
+        content: ' ';
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: $main-font-color;
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+      }
+      &:after {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        content: ' ';
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: $main-font-color;
+        transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+      }
+  }
+  
+  .header-mob__burg.activeburg {
+    background-color: transparent;
+      &:before {
+        transform: rotate(45deg);
+        top: 0;
+        transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+        background-color: $red-font-color;
+      }
+      &:after {
+        transform: rotate(-45deg);
+        top: 0;
+        transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+        color: $red-font-color;
+        background-color: $red-font-color;
+      }
+  }
+
+  .header-logo {
+      white-space: nowrap;
+  }
+
+  .header-link {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 790px;
+      ul {
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          max-width: 400px;
+            a {
+                &:after {
+                    display: none;
+                }
+                font-weight: bold;
+            }
+      }
+  }
+
+  .header-contacts {
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      margin-right: 50px;
+        a {
+            padding: 3px 0;
+        }
+  }
+
+  .header-contacts__number {
+      font-weight: bold;
+    &:after {
+        display: none;
+    }
+  }
+  

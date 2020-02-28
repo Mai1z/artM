@@ -1,0 +1,33 @@
+
+// ======= Main content =======
+
+.main-content {
+    margin-top: 3%;
+}
+
+.main-content__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 65vh;
+    a {
+            display: flex;
+    }
+    p {
+        max-width: 25%;
+    }
+}
+
+.main-content__social {
+    margin-top: 5%;
+    position: relative;
+        svg {
+            margin-right: 15px;
+        }
+}
+
+.main-content__present {
+    position: absolute;
+    right: 37%;
+    top: 20%;
+}
