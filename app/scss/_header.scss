@@ -65,6 +65,8 @@
 
   .header-logo {
       white-space: nowrap;
+      position: relative;
+      z-index: 16;
   }
 
   .header-link {
@@ -97,9 +99,34 @@
   }
 
   .header-contacts__number {
-      font-weight: bold;
+    position: relative;
+    font-weight: bold;
+    margin-left: 30px;
     &:after {
         display: none;
     }
+    &:before {
+      content: '\e904';
+      font-family: 'icomoon';
+      font-size: 20px;
+      position: absolute;
+      left: -30px;
+    }
   }
   
+  .header-contacts__mail {
+    position: relative;
+    margin-left: 30px;
+    &:before {
+      content: '\e902';
+      font-family: 'icomoon';
+      font-size: 20px;
+      position: absolute;
+      left: -30px;
+    }
+  }
+
+  .header-button {
+    position: relative;
+    z-index: 16;
+  }

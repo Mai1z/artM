@@ -12,6 +12,7 @@
     height: 65vh;
     a {
             display: flex;
+            max-width: 200px;
     }
     p {
         max-width: 25%;
@@ -30,4 +31,22 @@
     position: absolute;
     right: 37%;
     top: 20%;
+        &:before {
+            content: '\e905';
+            font-family: 'icomoon';
+            font-size: 20px;
+            position: absolute;
+            left: -30px;
+        }
+}
+
+.main-content__present2 {
+    margin-left: 30px;
+    &:before {
+        content: '\e905';
+        font-family: 'icomoon';
+        font-size: 20px;
+        position: absolute;
+        left: -30px;
+    }
 }

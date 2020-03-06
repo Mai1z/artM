@@ -42,5 +42,7 @@ if ($slider.length) {
 
   $slider.slick({
     fade: true,
+    prevArrow: '.arrow-back',
+    nextArrow: '.arrow-forward',
   });
 }
