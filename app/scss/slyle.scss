@@ -31,7 +31,8 @@ body {
 	// -webkit-backface-visibility: hidden;
 	-webkit-tap-highlight-color: rgba(0,0,0,0); 
 	-webkit-tap-highlight-color: transparent;
-	background-color: $main-bgcolor;
+  background-color: $main-bgcolor;
+  overflow-x: hidden;
 }
 
 .container {
@@ -406,6 +407,7 @@ $arrow-head-thickness: $shaft-thickness;
       z-index: 10;
       bottom: 24px;
       left: 22px;
+      cursor: pointer;
     }
 }
 
@@ -418,6 +420,7 @@ $arrow-head-thickness: $shaft-thickness;
       z-index: 10;
       bottom: 24px;
       right: 22px;
+      cursor: pointer;
     }
 }
 
@@ -625,8 +628,111 @@ header nav ul li a:hover {
           transform: translateY(-8px) rotate(-45deg);
 }
 
+.sidebar-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 100;
+  width: 0;
+  right: 0;
+  background-color: $main-bgcolor;
+  // transform: translate(100%);
+  transition: 0.2s linear;
+  overflow: hidden;
+}
+
+.sidebar-right.open {
+  width: 36%;
+}
+
+.sidebar-right__inner {
+  padding: 65px 50px;
+    h2 {
+      white-space: nowrap;
+      color: $red-font-color;
+    }
+    form {
+      margin-top: 100px;
+      white-space: nowrap;
+      display: flex;
+      flex-direction: column;
+      color: $main-font-color;
+        input {
+          background-color: transparent;
+          border: none;
+          border-bottom: 2px solid $red-font-color;
+          outline: none;
+          position: relative;
+          color: $main-font-color;
+          font-family: $main-font;
+          margin-bottom: 40px;
+          padding-bottom: 10px;
+          width: 80%;
+          &::placeholder {
+            color: $main-font-color;
+          }
+        }
+        textarea {
+          background-color: transparent;
+          font-family: $main-font;
+          border: 2px solid $red-font-color;
+          outline: none;
+          position: relative;
+          color: $main-font-color;
+          resize: none;
+          margin-bottom: 40px;
+          height: 150px;
+          padding: 10px;
+          &::placeholder {
+            color: $main-font-color;
+          }
+        }
+        label {
+          border-bottom: 2px solid $red-font-color;
+          width: 165px;
+          padding-bottom: 5px;
+          margin-left: 10px;
+        }
+    }
+}
+
+#file-input {
+  display: none;
+}
+
+.form-submit {
+  display: flex;
+  white-space: pre-wrap;
+  margin-top: 30px;
+    button {
+      border: 3px solid $red-font-color;
+      background-color: transparent;
+      margin-right: 20px;
+      width: 100%;
+      max-width: 290px;
+      font-size: 25px;
+    }
+    p {
+      font-weight: normal;
+      font-size: 15px;
+    }
+    a {
+      font-size: 15px;
+      text-decoration: underline;
+      text-decoration-color: $red-font-color;
+      &::after {
+        display: none;
+      }
+    }
+}
+
 
 // ====== Главная страница =====
 
 @import 'header';
 @import 'main-content';
+
+
+// ====== Servise =====
+
+@import 'servise';

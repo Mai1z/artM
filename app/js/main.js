@@ -15,6 +15,26 @@ $('.header-wrapper').on('click', function(e) {
 	return 0;
 });
 
+const openClass = 'open';
+
+$('.header-button').on('click', function(){
+  $('.sidebar-right').addClass(openClass);
+
+  $('body').on('click', function(e) {
+    $('.sidebar-right').removeClass(openClass);
+  });
+});
+$('.header-button').on('click', function(e) {
+	e.stopPropagation();
+	return 0;
+});
+$('.sidebar-right').on('click', function(e) {
+	e.stopPropagation();
+	return 0;
+});
+
+
+
 // ==== BG Slider ====
 
 var $slider = $('.slider');
@@ -46,3 +66,9 @@ if ($slider.length) {
     nextArrow: '.arrow-forward',
   });
 }
+
+$('.main-servise__slider').slick({
+  slidesToShow: 3,
+  prevArrow: '.arrow-back.serv',
+  nextArrow: '.arrow-forward.serv',
+})

@@ -1,0 +1,43 @@
+// ======= Main content =======
+
+.main-servise {
+    display: grid;
+    grid-template-columns: 1fr minmax(400px, 600px);
+    grid-column-gap: 50px;
+    margin-top: 40px;
+}
+
+.main-servise__left {
+    img {
+        width: 100%;
+    }
+    p {
+        font-weight: normal;
+        font-size: 17px;
+    }
+}
+
+.main-servise__right {
+    h2 {
+        color: $red-font-color;
+        margin-top: 50px;
+        margin-bottom: 55px;
+    }
+    h3 {
+        color: $grey-font-color;
+        margin-bottom: 20px;
+    }
+}
+
+.main-servise__slider {
+    display: flex;
+        img {
+            margin-right: 30px;
+            background: linear-gradient(0deg, rgba(36, 36, 38, 0.5), rgba(36, 36, 38, 0.5));
+        }
+}
+
+.am-img {
+    position: absolute;
+    right: 0;
+}
