@@ -18,6 +18,7 @@
     align-items: center;
     flex-direction: column;
     transition: 0.2s linear;
+    cursor: pointer;
     &:hover {
         box-shadow: 0px 0px 20px $red-font-color;
         border-radius: 5px;

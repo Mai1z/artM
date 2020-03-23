@@ -739,12 +739,45 @@ header nav ul li a:hover {
   display: none;
 }
 
+.page {
+  z-index: -1;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: opacity .5s;
+  padding-top: 60px;
+}
+
+.page.active {
+  z-index: 1;
+  opacity: 1;
+}
+
+.index_page-container {
+  position: fixed;
+  width: 10px;
+  height: 300px;
+  left: 50px;
+  top: 100px;
+  background-color: #ccc;
+  transition: .5s;
+  z-index: 2;
+}
+
+.index_page-container {
+  display: none;
+}
+
 .header {
   height: 100px;
   width: 100%;
   display: flex;
   align-items: center;
   position: relative;
+  z-index: 100;
 }
 
 .header-mob__burg-btn {
@@ -952,6 +985,7 @@ header nav ul li a:hover {
   align-items: center;
   flex-direction: column;
   transition: 0.2s linear;
+  cursor: pointer;
 }
 
 .production__item:hover {
@@ -1061,10 +1095,19 @@ header nav ul li a:hover {
   display: flex !important;
 }
 
+.cart-slider__item img {
+  max-width: 400px;
+  height: 100%;
+}
+
 .cart-left__text a {
   margin-top: 30px;
 }
 
 .cart-left__text h1 {
   margin-bottom: 50px;
+}
+
+.cart-left__text p {
+  max-width: 500px;
 }

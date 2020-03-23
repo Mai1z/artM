@@ -41,6 +41,10 @@
 
 .cart-slider__item {
     display: flex!important;
+    img {
+        max-width: 400px;
+        height: 100%;
+    }
 }
 
 .cart-left__text {
@@ -49,6 +53,9 @@
     }
     h1 {
         margin-bottom: 50px;
+    }
+    p {
+        max-width: 500px;
     }
 }
 
