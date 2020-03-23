@@ -50,7 +50,8 @@ h1 {
 	font-family: $main-font;
 	font-weight: bold;
 	font-size: 100px;
-	color: $red-font-color;
+  color: $red-font-color;
+  line-height: 1;
 }
 
 h2 {
@@ -389,15 +390,67 @@ $arrow-head-thickness: $shaft-thickness;
   }
 }
 
-.arrows {
+.arrows.serv {
+  display: flex;
+  position: absolute;
+  bottom: 13%;
+  /* right: 18%; */
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  left: 42px;
+  cursor: pointer;
+  color: $grey-font-color;
+}
+
+.arrow-back.serv {
+    &:before {
+      content: '\e900';
+      font-family: 'icomoon';
+      font-size: 14px;
+      transform: rotate(180deg);
+      position: absolute;
+      z-index: 10;
+      left: -40px;
+      cursor: pointer;
+      top: 3px;
+      color: $grey-font-color;
+      /* bottom: 24px; */
+    }
+}
+
+.arrow-forward.serv {
+    &:before {
+      content: '\e900';
+      font-family: 'icomoon';
+      font-size: 14px;
+      position: absolute;
+      z-index: 10;
+      /* bottom: 24px; */
+      right: -40px;
+      cursor: pointer;
+      top: 3px;
+      color: $grey-font-color;
+    }
+}
+
+.arrows.main.cart{
+  position: absolute;
+  bottom: -18%;
+  right: 20.5%;
+  width: 200px;
+  height: 60px;
+}
+
+.arrows.main{
   position: absolute;
   bottom: 15%;
   right: 18%;
   width: 200px;
-    height: 60px;
+  height: 60px;
 }
 
-.arrow-back {
+.arrow-back.main{
     &:before {
       content: '\e900';
       font-family: 'icomoon';
@@ -411,7 +464,7 @@ $arrow-head-thickness: $shaft-thickness;
     }
 }
 
-.arrow-forward {
+.arrow-forward.main{
     &:before {
       content: '\e900';
       font-family: 'icomoon';
@@ -434,6 +487,11 @@ $arrow-head-thickness: $shaft-thickness;
     max-width: 100%;
     object-fit: cover;
   }
+}
+
+.cart__left .slider__counter {
+  bottom: -21%;
+  right: -9%;
 }
 
 .slider__counter {
@@ -732,7 +790,14 @@ header nav ul li a:hover {
 @import 'header';
 @import 'main-content';
 
+// ====== Production =====
+
+@import 'production';
 
 // ====== Servise =====
 
 @import 'servise';
+
+// ====== Cart =====
+
+@import 'cart';

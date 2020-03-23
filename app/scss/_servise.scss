@@ -18,6 +18,7 @@
 }
 
 .main-servise__right {
+    position: relative;
     h2 {
         color: $red-font-color;
         margin-top: 50px;
@@ -31,6 +32,12 @@
 
 .main-servise__slider {
     display: flex;
+    position: absolute;
+    width: 125%;
+    min-width: 936px;
+    right: -20px;
+    left: 0;
+    height: 300px;
         img {
             margin-right: 30px;
             background: linear-gradient(0deg, rgba(36, 36, 38, 0.5), rgba(36, 36, 38, 0.5));
