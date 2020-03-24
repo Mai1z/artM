@@ -133,6 +133,30 @@ if ($slider.length) {
   });
 }
 
+var $slider = $('.portfolio__slider2');
+
+if ($slider.length) {
+  var currentSlide;
+  var slidesCount;
+  var sliderCounter = document.createElement('div');
+  sliderCounter.classList.add('slider__counter');
+  
+  var updateSliderCounter = function(slick, currentIndex) {
+    currentSlide = slick.slickCurrentSlide() + 1;
+    slidesCount = slick.slideCount;
+    sliderCounter.innerHTML = '<p class="slider-current">' + currentSlide + '</p>' + '<p class="slider-slash">' + '/' + '</p>' + '<p class="slider-count">' + slidesCount + '</p>'
+  };
+
+  $slider.on('init', function(event, slick) {
+    $slider.append(sliderCounter);
+    updateSliderCounter(slick);
+  });
+
+  $slider.on('afterChange', function(event, slick, currentSlide) {
+    updateSliderCounter(slick, currentSlide);
+  });
+}
+
 const slider = $('.index_page-container');
 const carret = $('.carret');
 const heightSlider = slider.height();
@@ -219,4 +243,22 @@ $('button.index').on('click', function() {
       onScrolling();
     });
   }
+});
+
+$('.portfolio__slider1').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.portfolio__slider2'
+});
+$('.portfolio__slider2').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.portfolio__slider1',
+  // dots: true,
+  // centerMode: true,
+  focusOnSelect: true,
+  prevArrow: '.arrow-back.portfolio',
+    nextArrow: '.arrow-forward.portfolio',
 });

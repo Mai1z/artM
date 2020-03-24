@@ -1,0 +1,34 @@
+
+.portfolio__slider {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio__slider1 {
+    max-width: 600px;
+    height: 100%;
+}
+
+.portfolio__slider2 {
+    width: 800px;
+    margin-left: 20px;
+    img {
+        margin-right: 20px;
+        max-width: 300px;
+        height: 300px;
+    }
+}
+
+.portfolio-slider2__img {
+    margin-right: 20px;
+    width: 300px;
+    height: 300px;
+}
+
+.portfolio-slider__item {
+    display: flex!important;
+    align-items: flex-end;
+    img {
+        max-width: 350px;
+    }
+}

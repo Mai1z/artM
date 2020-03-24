@@ -442,6 +442,14 @@ $arrow-head-thickness: $shaft-thickness;
   height: 60px;
 }
 
+.arrows.main.portfolio{
+  position: absolute;
+  bottom: -7%;
+  right: 40%;
+  width: 200px;
+  height: 60px;
+}
+
 .arrows.main{
   position: absolute;
   bottom: 15%;
@@ -487,6 +495,11 @@ $arrow-head-thickness: $shaft-thickness;
     max-width: 100%;
     object-fit: cover;
   }
+}
+
+.portfolio__slider2 .slider__counter {
+  bottom: -28%;
+  right: 71.5%;
 }
 
 .cart__left .slider__counter {
@@ -835,3 +848,7 @@ header nav ul li a:hover {
 // ====== Cart =====
 
 @import 'cart';
+
+// ====== Portfolio =====
+
+@import 'portfolio';

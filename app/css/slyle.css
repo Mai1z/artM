@@ -407,6 +407,14 @@ button {
   height: 60px;
 }
 
+.arrows.main.portfolio {
+  position: absolute;
+  bottom: -7%;
+  right: 40%;
+  width: 200px;
+  height: 60px;
+}
+
 .arrows.main {
   position: absolute;
   bottom: 15%;
@@ -448,6 +456,11 @@ button {
   height: 100%;
   max-width: 100%;
   object-fit: cover;
+}
+
+.portfolio__slider2 .slider__counter {
+  bottom: -28%;
+  right: 71.5%;
 }
 
 .cart__left .slider__counter {
@@ -1110,4 +1123,40 @@ header nav ul li a:hover {
 
 .cart-left__text p {
   max-width: 500px;
+}
+
+.portfolio__slider {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__slider1 {
+  max-width: 600px;
+  height: 100%;
+}
+
+.portfolio__slider2 {
+  width: 800px;
+  margin-left: 20px;
+}
+
+.portfolio__slider2 img {
+  margin-right: 20px;
+  max-width: 300px;
+  height: 300px;
+}
+
+.portfolio-slider2__img {
+  margin-right: 20px;
+  width: 300px;
+  height: 300px;
+}
+
+.portfolio-slider__item {
+  display: flex !important;
+  align-items: flex-end;
+}
+
+.portfolio-slider__item img {
+  max-width: 350px;
 }
