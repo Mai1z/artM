@@ -1149,6 +1149,8 @@ header nav ul li a:hover {
   margin-right: 20px;
   max-width: 300px;
   height: 300px;
+  background-position: center;
+  background-size: cover;
 }
 
 .portfolio-slider2__img {
@@ -1164,6 +1166,7 @@ header nav ul li a:hover {
 
 .portfolio-slider__item img {
   max-width: 350px;
+  height: 370px;
 }
 
 .news__inner {
@@ -1280,7 +1283,7 @@ header nav ul li a:hover {
 }
 
 .footer__bottom-line {
-  margin-top: 40px;
+  margin-top: 90px;
   color: #808080;
   font-size: 14px;
 }
