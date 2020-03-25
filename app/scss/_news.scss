@@ -1,0 +1,40 @@
+
+// ====== News ======
+
+.news__inner {
+    display: flex;
+    justify-content: space-between;
+    h1 {
+        margin-top: 60px;
+    }
+}
+
+.news-inner__items {
+    display: flex;
+}
+
+.news-inner__item {
+    max-width: 270px;
+    margin-right: 30px;
+}
+
+.news-inner-item__data {
+    display: flex;
+    margin-bottom: 20px;
+    h4 {
+        margin-right: 5px;
+        color: $grey-font-color;
+    }
+    p {
+        color: $grey-font-color;
+    }
+}
+
+.news-inner-item__img {
+    margin-bottom: 20px;
+    width: 100%;
+    img {
+        width: 100%;
+        height: 215px;
+    }
+}

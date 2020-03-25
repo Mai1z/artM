@@ -24,6 +24,7 @@ $('.header-button').on('click', function(){
     $('.sidebar-right').removeClass(openClass);
   });
 });
+
 $('.header-button').on('click', function(e) {
 	e.stopPropagation();
 	return 0;
@@ -35,17 +36,20 @@ $('.sidebar-right').on('click', function(e) {
 
 
 
-// ==== BG Slider ====
+
+
+
+// ==== Slider counter 1 ====
 
 var $slider = $('.slider');
 
 if ($slider.length) {
-  var currentSlide;
-  var slidesCount;
-  var sliderCounter = document.createElement('div');
+  let currentSlide;
+  let slidesCount;
+  let sliderCounter = document.createElement('div');
   sliderCounter.classList.add('slider__counter');
   
-  var updateSliderCounter = function(slick, currentIndex) {
+  let updateSliderCounter = function(slick, currentIndex) {
     currentSlide = slick.slickCurrentSlide() + 1;
     slidesCount = slick.slideCount;
     sliderCounter.innerHTML = '<p class="slider-current">' + currentSlide + '</p>' + '<p class="slider-slash">' + '/' + '</p>' + '<p class="slider-count">' + slidesCount + '</p>'
@@ -73,15 +77,21 @@ $('.main-servise__slider').slick({
   nextArrow: '.arrow-forward.serv',
 })
 
+
+
+
+
+// ==== Slider counter 2 ====
+
 var $slider = $('.cart__slider');
 
 if ($slider.length) {
-  var currentSlide;
-  var slidesCount;
-  var sliderCounter = document.createElement('div');
+  let currentSlide;
+  let slidesCount;
+  let sliderCounter = document.createElement('div');
   sliderCounter.classList.add('slider__counter');
   
-  var updateSliderCounter = function(slick, currentIndex) {
+  let updateSliderCounter = function(slick, currentIndex) {
     currentSlide = slick.slickCurrentSlide() + 1;
     slidesCount = slick.slideCount;
     sliderCounter.innerHTML = '<p class="slider-current">' + currentSlide + '</p>' + '<p class="slider-slash">' + '/' + '</p>' + '<p class="slider-count">' + slidesCount + '</p>'
@@ -103,15 +113,21 @@ if ($slider.length) {
   });
 }
 
+
+
+
+
+// ==== Slider counter 3 ====
+
 var $slider = $('.cart__slider2');
 
 if ($slider.length) {
-  var currentSlide;
-  var slidesCount;
-  var sliderCounter = document.createElement('div');
+  let currentSlide;
+  let slidesCount;
+  let sliderCounter = document.createElement('div');
   sliderCounter.classList.add('slider__counter');
   
-  var updateSliderCounter = function(slick, currentIndex) {
+  let updateSliderCounter = function(slick, currentIndex) {
     currentSlide = slick.slickCurrentSlide() + 1;
     slidesCount = slick.slideCount;
     sliderCounter.innerHTML = '<p class="slider-current">' + currentSlide + '</p>' + '<p class="slider-slash">' + '/' + '</p>' + '<p class="slider-count">' + slidesCount + '</p>'
@@ -133,15 +149,21 @@ if ($slider.length) {
   });
 }
 
+
+
+
+
+// ==== Slider counter 4 ====
+
 var $slider = $('.portfolio__slider2');
 
 if ($slider.length) {
-  var currentSlide;
-  var slidesCount;
-  var sliderCounter = document.createElement('div');
+  let currentSlide;
+  let slidesCount;
+  let sliderCounter = document.createElement('div');
   sliderCounter.classList.add('slider__counter');
   
-  var updateSliderCounter = function(slick, currentIndex) {
+  let updateSliderCounter = function(slick, currentIndex) {
     currentSlide = slick.slickCurrentSlide() + 1;
     slidesCount = slick.slideCount;
     sliderCounter.innerHTML = '<p class="slider-current">' + currentSlide + '</p>' + '<p class="slider-slash">' + '/' + '</p>' + '<p class="slider-count">' + slidesCount + '</p>'
@@ -157,10 +179,39 @@ if ($slider.length) {
   });
 }
 
+
+// ======== Sliders =========
+
+
+$('.portfolio__slider1').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.portfolio__slider2'
+});
+$('.portfolio__slider2').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.portfolio__slider1',
+  // dots: true,
+  // centerMode: true,
+  focusOnSelect: true,
+  prevArrow: '.arrow-back.portfolio',
+  nextArrow: '.arrow-forward.portfolio',
+});
+
+
+
+
+
+// ==== Переключение экранов ====
+
+
 const slider = $('.index_page-container');
 const carret = $('.carret');
 const heightSlider = slider.height();
-const countPages = 3; // считать от нуля
+const countPages = 4; // считать от нуля
 const loop = false; //зациклить
 const animateDuration = 300;
 const fullAnimate = animateDuration * countPages / 3;
@@ -245,20 +296,5 @@ $('button.index').on('click', function() {
   }
 });
 
-$('.portfolio__slider1').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '.portfolio__slider2'
-});
-$('.portfolio__slider2').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: '.portfolio__slider1',
-  // dots: true,
-  // centerMode: true,
-  focusOnSelect: true,
-  prevArrow: '.arrow-back.portfolio',
-    nextArrow: '.arrow-forward.portfolio',
-});
+
+

@@ -703,7 +703,7 @@ header nav ul li a:hover {
   position: absolute;
   top: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 110;
   width: 0;
   right: 0;
   background-color: $main-bgcolor;
@@ -828,10 +828,6 @@ header nav ul li a:hover {
   display: none;
 }
 
-
-
-
-
 // ====== Главная страница =====
 
 @import 'header';
@@ -852,3 +848,11 @@ header nav ul li a:hover {
 // ====== Portfolio =====
 
 @import 'portfolio';
+
+// ====== News =====
+
+@import 'news';
+
+// ====== Footer =====
+
+@import 'footer';
