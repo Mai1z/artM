@@ -199,6 +199,7 @@ $('.portfolio__slider2').slick({
   focusOnSelect: true,
   prevArrow: '.arrow-back.portfolio',
   nextArrow: '.arrow-forward.portfolio',
+  infinite: false,
 });
 
 
