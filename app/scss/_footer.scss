@@ -73,3 +73,38 @@
     color: $grey-font-color;
     font-size: 14px;
 }
+
+@media (max-width: 1490px) {
+    .footer__inner {
+        margin-top: 25px;
+        &:after {
+            bottom: 30px;
+        }
+    }
+    .footer-inner__item h4 {
+        margin-bottom: 10px;
+    }
+    .footer-inner-item__list ul li {
+        margin-bottom: 5px;
+    }
+    .footer-inner-item__list ul {
+        margin-bottom: 20px;
+    }
+    .footer-inner__item .header-contacts a {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .footer-inner__item .main-content__social {
+        margin-bottom: 15px;
+    }
+    .footer__bottom-line {
+        margin-top: 25px;
+    }
+
+}
+
+@media (max-width: 1090px) {
+    .footer.main {
+        display: none;
+    }
+}

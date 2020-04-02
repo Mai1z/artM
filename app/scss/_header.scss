@@ -131,3 +131,19 @@
     position: relative;
     z-index: 16;
   }
+
+  body.fixed {
+    position: fixed;
+  }
+
+  @media (max-width: 1090px) {
+    .header-link {
+      display: none;
+    }
+    .header-contacts {
+      display: none;
+    }
+    .header-button {
+      display: none;
+    }
+  } 

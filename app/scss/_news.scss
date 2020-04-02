@@ -38,3 +38,43 @@
         height: 215px;
     }
 }
+
+@media (max-width: 1490px) {
+    .news-inner__item {
+        max-width: 160px;
+    }
+    .news-inner-item__img img {
+        height: 120px;
+    }
+    .news-inner-item__data {
+        margin-bottom: 5px;
+    }
+    .news .cart__all {
+        margin-top: 40px;
+    }
+    .news-inner-item__img {
+        margin-bottom: 5px;
+    }
+}
+
+@media (max-width: 1090px) {
+    .news__inner {
+        display: block;
+    }
+    .news__inner h1 {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .news-inner__items {
+        overflow: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .news-inner__items::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+    .news-inner-item__img img {
+        width: auto;
+    }
+}

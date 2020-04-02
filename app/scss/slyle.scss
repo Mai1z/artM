@@ -33,6 +33,7 @@ body {
 	-webkit-tap-highlight-color: transparent;
   background-color: $main-bgcolor;
   overflow-x: hidden;
+  width: 100%;
 }
 
 .container {
@@ -590,6 +591,8 @@ header nav ul {
   display: flex;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  justify-content: space-between;
+  width: 90%;
 }
 
 .burger-menu1 {
@@ -827,6 +830,111 @@ header nav ul li a:hover {
 .index_page-container {
   display: none;
 }
+
+@media (max-width: 1490px) {
+  body {
+    font-size: 14px;
+  }
+  h1 {
+    font-size: 70px;
+  }
+  .container {
+    max-width: 1250px;
+  }
+  .slider__counter {
+    right: 10%;
+  }
+  .arrows.main {
+    right: 10%;
+  }
+  .burger-menu {
+    top: 120px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  .sidebar-right__inner {
+    padding: 40px 50px;
+  }
+  .sidebar-right__inner form {
+    margin-top: 30px;
+  }
+  .sidebar-right__inner form input {
+    margin-bottom: 30px;
+  }
+  .sidebar-right__inner form textarea {
+    height: 110px;
+    margin-bottom: 25px;
+  }
+  .form-submit p {
+    font-size: 12px;
+  }
+  .form-submit a {
+    font-size: 12px;
+  }
+  .form-submit button {
+    font-size: 14px;
+    height: 45px;
+    padding: 0px 23px;
+  }
+  .header-link ul {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1290px) {
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1090px) {
+  .sidebar {
+    display: none;
+  }
+  .toggle-btn {
+    margin-right: 20px;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  h3 {
+    font-size: 26px;
+  }
+  .slider__item {
+    max-height: 250px;
+  }
+  .slider {
+      position: static;
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+  }
+  .container.plus {
+      padding-left: 20px;
+  }
+  .arrows.main {
+    right: auto;
+    top: 345px;
+  }
+  .slider__counter {
+    right: auto;
+    top: 345px;
+  }
+  .arrows-items {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  .arrows.main.cart {
+    right: auto;
+    top: 110%;
+  }
+}
+
 
 // ====== Главная страница =====
 

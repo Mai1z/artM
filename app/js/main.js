@@ -15,6 +15,10 @@ $('.header-wrapper').on('click', function(e) {
 	return 0;
 });
 
+$('.toggle-btn').on('click', function(){
+  $('body').toggleClass('fixed');
+});
+
 const openClass = 'open';
 
 $('.header-button').on('click', function(){
