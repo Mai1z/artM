@@ -21,7 +21,7 @@ $('.toggle-btn').on('click', function(){
 
 const openClass = 'open';
 
-$('.header-button').on('click', function(){
+$('.blob-btn').on('click', function(){
   $('.sidebar-right').addClass(openClass);
 
   $('body').on('click', function(e) {
@@ -29,7 +29,11 @@ $('.header-button').on('click', function(){
   });
 });
 
-$('.header-button').on('click', function(e) {
+$('.sidebar-close').on('click', function() {
+  $('.sidebar-right').removeClass(openClass);
+});
+
+$('.blob-btn').on('click', function(e) {
 	e.stopPropagation();
 	return 0;
 });
@@ -301,5 +305,22 @@ $('button.index').on('click', function() {
   }
 });
 
+
+let acc = document.getElementsByClassName("burger-menu__btn");
+let i;
+
+for (i=0; i<acc.length; i++) {
+  acc[i].addEventListener ("click", function () {
+    this.classList.toggle("active");
+
+    let panel = this.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
 
 

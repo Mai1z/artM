@@ -2,7 +2,7 @@
 // ======= Production =======
 
 .production {
-    padding-top: 80px;
+    padding-top: 40px;
 }
 
 .production__items {
@@ -31,5 +31,27 @@
         text-align: center;
         font-weight: normal;
         transition: 0.2s linear;
+    }
+}
+
+@media (max-width: 1090px) {
+    .production {
+        padding-top: 20px;
+    }
+    .production__item {
+        flex-direction: row;
+    }
+    .production__item img {
+        width: 100%;
+        max-width: 130px;
+        padding-right: 20px;
+    }
+    .production__item p {
+        text-align: left;
+    }
+    .production__items {
+        grid-auto-rows: 130px;
+        margin-top: 20px;
+        grid-column-gap: 30px;
     }
 }

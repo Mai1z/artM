@@ -11,6 +11,34 @@
 </head>
 <body>	
 
+	<div class="sidebar-right">
+		<div class="sidebar-right__inner">
+			<h2>Оставить заявку</h2>
+			<img class="sidebar-close" src="img/close.svg" alt="">
+			<form action="#">
+				<input class="required" type="text" name="name" placeholder="Ваше имя *" required="required">
+				<input class="required" type="phone" name="phone" placeholder="Номер телефона *" required="required">
+				<input class="required" type="email" name="email" placeholder="Электронная почта *" required="required">
+				<textarea name="feedback" id="feedback" placeholder="Оставьте свои пожелания"></textarea>
+				<input class="required" id="file-input" type="file" name="get-file" placeholder="Прикрепите файл *" required="required">
+				<div class="form-file">
+					<svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M8.4375 5.25V15.3125C8.4375 17.2463 6.87125 18.8125 4.9375 18.8125C3.00375 18.8125 1.4375 17.2463 1.4375 15.3125V4.375C1.4375 3.1675 2.4175 2.1875 3.625 2.1875C4.8325 2.1875 5.8125 3.1675 5.8125 4.375V13.5625C5.8125 14.0437 5.42312 14.4375 4.9375 14.4375C4.45188 14.4375 4.0625 14.0437 4.0625 13.5625V5.25H2.75V13.5625C2.75 14.77 3.73 15.75 4.9375 15.75C6.145 15.75 7.125 14.77 7.125 13.5625V4.375C7.125 2.44125 5.55875 0.875 3.625 0.875C1.69125 0.875 0.125 2.44125 0.125 4.375V15.3125C0.125 17.9725 2.28187 20.125 4.9375 20.125C7.59312 20.125 9.75 17.9725 9.75 15.3125V5.25H8.4375Z" fill="#F2F2F2"/>
+					</svg>						
+					<label for="file-input">Прикрепите файл *</label>
+				</div>
+				<div class="form-submit">
+					<button>Отправить</button>
+					<p>Отправляя вы соглашаетесь с <a href="#">пользовательским соглашением и политикой конфиденциальности</a></p>
+				</div>
+			</form>
+		</div>
+		
+	</div>
+	
+	<!------- Header ------->
+	
+
 	<header>
 		<div class="container">
 			<div class="header">
@@ -38,31 +66,59 @@
 					<a class="header-contacts__number" href="#">8 800 250 91 50</a>
 					<a class="header-contacts__mail" href="#">inbox@art-mashine.net</a>
 				</div>
-				<button class="header-button">Отправить заявку</button>	
+				<div class="buttons main">
+					<button class="blob-btn">
+						Отправить заявку
+						<span class="blob-btn__inner">
+							<span class="blob-btn__blobs">
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+								<span class="blob-btn__blob"></span>
+							</span>
+						</span>
+					</button>
+					<br/>
+				
+				<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+					<defs>
+						<filter id="goo">
+							<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+							<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+							<feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+						</filter>
+					</defs>
+				</svg>
+			</div>
 				<nav>
 					<div class="container plus">
 						<div class="burger-menu">
-							<ul class="burger-menu1">
-								<h2>Услуги</h2>
-								<li><a href="#">Монтаж</a></li>
-								<li><a href="#">Дизайн</a></li>
-								<li><a href="#">Проектирование </a></li>
-								<li><a href="#">Плоттерная резка</a></li>
-								<li><a href="#">Лазерная резка </a></li>
-								<li><a href="#">Фрезеровка</a></li>
-								<li><a href="#">Регистрация</a></li>
-							</ul>
-							<ul class="burger-menu2">
-								<h2>Продукция</h2>
-								<li><a href="#">Монтаж</a></li>
-								<li><a href="#">Дизайн</a></li>
-								<li><a href="#">Проектирование </a></li>
-								<li><a href="#">Плоттерная резка</a></li>
-								<li><a href="#">Лазерная резка </a></li>
-								<li><a href="#">Фрезеровка</a></li>
-								<li><a href="#">Регистрация</a></li>
-							</ul>
-							<ul class="burger-menu3">
+							<div class="burger-menu__item">
+								<h2 class="burger-menu__btn">Услуги</h2>
+								<ul class="burger-menu__list">
+									<li><a href="#">Монтаж</a></li>
+									<li><a href="#">Дизайн</a></li>
+									<li><a href="#">Проектирование </a></li>
+									<li><a href="#">Плоттерная резка</a></li>
+									<li><a href="#">Лазерная резка </a></li>
+									<li><a href="#">Фрезеровка</a></li>
+									<li><a href="#">Регистрация</a></li>
+								</ul>
+							</div>
+							<div class="burger-menu__item">
+								<h2 class="burger-menu__btn">Продукция</h2>
+								<ul class="burger-menu__list">
+									<li><a href="#">Монтаж</a></li>
+									<li><a href="#">Дизайн</a></li>
+									<li><a href="#">Проектирование </a></li>
+									<li><a href="#">Плоттерная резка</a></li>
+									<li><a href="#">Лазерная резка </a></li>
+									<li><a href="#">Фрезеровка</a></li>
+									<li><a href="#">Регистрация</a></li>
+								</ul>
+							</div>
+							
+							<ul class="burger-menu__item">
 								<h2>Портфолио</h2>
 								<h2>О компании</h2>
 								<h2>Контакты</h2>
@@ -93,6 +149,33 @@
 									</svg>
 					
 								</div>
+								<div class="buttons">
+										<button class="blob-btn">
+											Отправить заявку
+											<span class="blob-btn__inner">
+												<span class="blob-btn__blobs">
+													<span class="blob-btn__blob"></span>
+													<span class="blob-btn__blob"></span>
+													<span class="blob-btn__blob"></span>
+													<span class="blob-btn__blob"></span>
+												</span>
+											</span>
+										</button>
+										<br/>
+									
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+										<defs>
+											<filter id="goo">
+												<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+												<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+												<feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+											</filter>
+										</defs>
+									</svg>
+								</div>
+                <!-- <button class="header-button">Отправить заявку</button>	 -->
+                <div class="main-content__special">				
+                </div>
 							</ul>
 						</div>
 					</div>
@@ -101,35 +184,11 @@
 		</div>
 	</header>
 
-	<div class="sidebar-right">
-		<div class="sidebar-right__inner">
-			<h2>Оставить заявку</h2>
-			<form action="#">
-				<input class="required" type="text" name="name" placeholder="Ваше имя *" required="required">
-				<input class="required" type="phone" name="phone" placeholder="Номер телефона *" required="required">
-				<input class="required" type="email" name="email" placeholder="Электронная почта *" required="required">
-				<textarea name="feedback" id="feedback" placeholder="Оставьте свои пожелания"></textarea>
-				<input class="required" id="file-input" type="file" name="get-file" placeholder="Прикрепите файл *" required="required">
-				<div class="form-file">
-					<svg width="10" height="21" viewBox="0 0 10 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M8.4375 5.25V15.3125C8.4375 17.2463 6.87125 18.8125 4.9375 18.8125C3.00375 18.8125 1.4375 17.2463 1.4375 15.3125V4.375C1.4375 3.1675 2.4175 2.1875 3.625 2.1875C4.8325 2.1875 5.8125 3.1675 5.8125 4.375V13.5625C5.8125 14.0437 5.42312 14.4375 4.9375 14.4375C4.45188 14.4375 4.0625 14.0437 4.0625 13.5625V5.25H2.75V13.5625C2.75 14.77 3.73 15.75 4.9375 15.75C6.145 15.75 7.125 14.77 7.125 13.5625V4.375C7.125 2.44125 5.55875 0.875 3.625 0.875C1.69125 0.875 0.125 2.44125 0.125 4.375V15.3125C0.125 17.9725 2.28187 20.125 4.9375 20.125C7.59312 20.125 9.75 17.9725 9.75 15.3125V5.25H8.4375Z" fill="#F2F2F2"/>
-					</svg>						
-					<label for="file-input">Прикрепите файл *</label>
-				</div>
-				<div class="form-submit">
-					<button>Отправить</button>
-					<p>Отправляя вы соглашаетесь с <a href="#">пользовательским соглашением и политикой конфиденциальности</a></p>
-				</div>
-			</form>
-		</div>
-		
-	</div>
-
 	<section class="page active" index="0">
 
 		<div class="slider">
-			<div class="slider__item" style="background: linear-gradient(0deg, rgba(36, 36, 38, 0.5), rgba(36, 36, 38, 0.5)), url(img/main-bg.png);"></div>
-			<div class="slider__item" style="background: linear-gradient(0deg, rgba(36, 36, 38, 0.5), rgba(36, 36, 38, 0.5)), url(img/home.jpg);"></div>
+			<div class="slider__item" style="background-image: linear-gradient(0deg, rgba(36, 36, 38, 0.5), rgba(36, 36, 38, 0.5)), url(img/main-bg.png);"></div>
+			<div class="slider__item" style="background-image: linear-gradient(0deg, rgba(36, 36, 38, 0.5), rgba(36, 36, 38, 0.5)), url(img/home.jpg);"></div>
 		</div>
 
 		<div class="arrows-items">

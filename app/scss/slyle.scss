@@ -394,7 +394,7 @@ $arrow-head-thickness: $shaft-thickness;
 .arrows.serv {
   display: flex;
   position: absolute;
-  bottom: 13%;
+  top: 650px;
   /* right: 18%; */
   width: 100%;
   height: 60px;
@@ -568,7 +568,7 @@ header nav ul h2 {
 }
 
 header nav ul {
-  margin-right: 100px;
+  margin-right: 20px;
   // list-style-type: none;
   // padding: 0;
   // margin: 0;
@@ -705,7 +705,7 @@ header nav ul li a:hover {
 .sidebar-right {
   position: absolute;
   top: 0;
-  bottom: 0;
+  // bottom: 0;
   z-index: 110;
   width: 0;
   right: 0;
@@ -831,6 +831,25 @@ header nav ul li a:hover {
   display: none;
 }
 
+.burger-menu__item {
+  margin-top: 0;
+}
+
+.burger-menu4 {
+  margin-top: 0;
+}
+
+.buttons {
+  display: none;
+}
+
+.sidebar-close {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+
+}
+
 @media (max-width: 1490px) {
   body {
     font-size: 14px;
@@ -880,6 +899,9 @@ header nav ul li a:hover {
   .header-link ul {
     padding: 0 15px;
   }
+  .arrows.serv {
+    top: 525px;
+  }
 }
 
 @media (max-width: 1290px) {
@@ -908,7 +930,9 @@ header nav ul li a:hover {
       position: static;
       margin-top: 30px;
       display: flex;
+      flex-direction: column;
       justify-content: center;
+      // align-items: center;
   }
   .container.plus {
       padding-left: 20px;
@@ -920,6 +944,7 @@ header nav ul li a:hover {
   .slider__counter {
     right: auto;
     top: 345px;
+    width: 100%;
   }
   .arrows-items {
     width: 100%;
@@ -933,7 +958,240 @@ header nav ul li a:hover {
     right: auto;
     top: 110%;
   }
+  .burger-menu4 {
+    .header-contacts {
+      display: flex;
+      margin-bottom: 0;
+    }
+    .main-content__social {
+      display: flex;
+    }
+    .main-content__special {
+      height: 100px;
+      width: 100%;
+    }
+    .header-button {
+      display: block;
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+  header nav ul {
+    margin-right: 20px;
+  }
+  header nav {
+    overflow: auto;
+    top: 90px;
+  }
+  .burger-menu {
+    flex-direction: column;
+    top: 0;
+    margin-top: 10px;
+      h2 {
+        font-size: 17px;
+        text-transform: uppercase;
+      }
+  }
+  .sidebar-right__inner {
+    padding: 20px 20px;
+  }
+  .sidebar-right {
+    height: 1000%;
+    z-index: 2000;
+  }
+  .sidebar-right.open {
+    width: 100%;
+    h2 {
+      font-size: 27px;
+    }
+  }
+  .burger-menu__list {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s linear;
+  }
+  .burger-menu__btn {
+    position: relative;
+    width: 100%;
+    max-width: 250px;
+    
+    &:after {
+        content: '\e900';
+        font-family: 'icomoon';
+        font-size: 7px;
+        transform: rotate(90deg);
+        position: absolute;
+        right: -40px;
+        bottom: -5px;
+        transition: 0.2s linear;
+        border: 2px solid $red-font-color;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+  .burger-menu__btn.active {
+    &:after {
+      transform: rotate(-90deg);
+      right: -40px;
+      bottom: -5px;
+      transition: 0.2s linear;
+  }
+  }
+  header {
+    position: relative;
+    z-index: 200;
+    background-color: $main-bgcolor;
+  }
+  header nav ul li a {
+    padding: 3px 0;
+  }
+  .burger-menu4 .header-contacts a {
+    width: fit-content;
+  }
+  .buttons {
+    display: block;
+  }
+  .buttons.main {
+    display: none!important;
+  }
 }
+
+.buttons {
+  margin-top: 25px;
+  text-align: center;
+  border-radius:30px;
+  height: 48px;
+  overflow: hidden;
+}
+
+.buttons.main {
+  display: block;
+  overflow: visible;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1000;
+  .blob-btn {
+    padding: 15px 45px;
+    width: auto;
+  }
+}
+
+$cyan: #E41E24;
+$dark: #FFFFFF;
+$borderW: 3px;
+
+.blob-btn {
+  $numOfBlobs: 4;
+  z-index: 1;
+  position: relative;
+  padding: 15px 45px;
+  width: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+  // text-transform: uppercase;
+  // color: $cyan;
+  font-size: 16px;
+  // font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius:30px;
+  
+  &:before {
+    content: "";
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: $borderW solid $cyan;
+    border-radius:30px;
+  }
+  
+  &:after {
+    content: "";
+    z-index: -2;
+    position: absolute;
+    left: $borderW*1.5;
+    top: $borderW*1.5;
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.3s 0.2s;
+    border-radius:30px;
+  }
+  
+  &:hover {
+    color: $dark;
+    border-radius:30px;
+    
+    &:after {
+      transition: all 0.3s;
+      left: 0;
+      top: 0;
+      border-radius:30px;
+    }
+  }
+  
+  &__inner {
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius:30px;
+    // background:#ffffff;
+  }
+  
+  // additional container created, because in FF blobs are breaking overflow:hidden of element with svg gooey filter
+  &__blobs {
+    position: relative;
+    display: block;
+    height: 100%;
+    filter: url('#goo');
+  }
+  
+  &__blob {
+    position: absolute;
+    top: $borderW;
+    width: 100% / $numOfBlobs;
+    height: 100%;
+    background: $cyan;
+    border-radius: 100%;
+    transform: translate3d(0,150%,0) scale(1.7);
+    transition: transform 0.45s;
+    
+    @supports(filter: url('#goo')) {
+      transform: translate3d(0,150%,0) scale(1.4);
+    }
+    
+    @for $i from 1 through $numOfBlobs {
+      &:nth-child(#{$i}) {
+        left: ($i - 1) * (120% / $numOfBlobs);
+        transition-delay: ($i - 1) * 0.08s;
+      }
+    }
+    
+    .blob-btn:hover & {
+      transform: translateZ(0) scale(1.7);
+      
+      @supports(filter: url('#goo')) {
+        transform: translateZ(0) scale(1.4);
+      }
+    }
+  }
+  
+}
+
 
 
 // ====== Главная страница =====

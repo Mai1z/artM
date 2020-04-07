@@ -19,10 +19,11 @@
 
 .main-servise__right {
     position: relative;
+    // overflow: hidden;
     h2 {
         color: $red-font-color;
         margin-top: 50px;
-        margin-bottom: 55px;
+        margin-bottom: 45px;
     }
     h3 {
         color: $grey-font-color;
@@ -47,4 +48,125 @@
 .am-img {
     position: absolute;
     right: 0;
+}
+
+@media (max-width: 1490px) {
+    .main-servise__left p {
+        font-size: 14px;
+    }
+    .main-servise__left img {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .main-servise {
+        margin-top: 15px;
+    }
+    .main-servise__slider {
+        min-width: auto;
+    }
+    .arrows.serv {
+        bottom: 23%;
+        max-width: 450px;
+    }
+    .am-img {
+        width: 140px;
+    }
+}
+
+@media (max-width: 1090px) {
+    .main-servise {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .main-servise__slider {
+        position: relative;
+        min-width: 800px;
+    }
+    .arrows.serv {
+        display: none;
+    }
+    .main-servise__right {
+        overflow: hidden;
+        p {
+            display: none;
+        }
+        h3 {
+            display: none;
+        }
+        h2 {
+            margin-top: 0px;
+            margin-bottom: 25px;
+            font-size: 25px;
+        }
+    }
+    .am-img {
+        width: 90px;
+        top: 45px;
+    }
+}
+
+
+.servise-list__items {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 270px));
+    grid-auto-rows: 240px;
+    grid-row-gap: 30px;
+}
+
+.servise-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.2s linear;
+    cursor: pointer;
+    &:hover {
+        .servise-list__img {
+            box-shadow: 0px 0px 20px $red-font-color;
+        }
+        p {
+            color: $red-font-color;
+        }
+    }
+    .servise-list__img {
+        border-radius: 50%;
+        transition: 0.2s linear;
+        img {
+            width: 100%;
+            height: 100%;
+            // border-radius: 50%;
+        }
+    }
+    p {
+        width: 200px;
+        text-align: center;
+        font-weight: normal;
+        transition: 0.2s linear;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 1090px) {
+
+    .servise-list__item {
+        flex-direction: row;
+    }
+    .servise-list__item img {
+        width: 100%;
+        max-width: 130px;
+        padding-right: 20px;
+    }
+    .servise-list__item p {
+        text-align: left;
+    }
+    .servise-list__items {
+        grid-auto-rows: 130px;
+        margin-top: 20px;
+        grid-column-gap: 30px;
+    }
+}
+
+.main-servise__left p {
+    margin-bottom: 10px;
 }

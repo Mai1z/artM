@@ -74,6 +74,32 @@
     font-size: 14px;
 }
 
+.footer-inner-item__list.mobile {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.2s linear;
+}
+
+.burger-menu__btn.mobile {
+    width: fit-content;
+    &:after {
+        border: none;
+        color: $red-font-color;
+        font-size: 9px;
+    }
+}
+
+.footer__inner.mobile:before {
+    content: '';
+    display: block;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+}
+
 @media (max-width: 1490px) {
     .footer__inner {
         margin-top: 25px;
@@ -101,6 +127,14 @@
         margin-top: 25px;
     }
 
+}
+
+.footer__inner.mobile {
+    flex-direction: column;
+    margin-top: 50px;
+    &:after {
+        bottom: 85px;
+    }
 }
 
 @media (max-width: 1090px) {
