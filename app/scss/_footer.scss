@@ -132,6 +132,7 @@
 .footer__inner.mobile {
     flex-direction: column;
     margin-top: 50px;
+    display: none;
     &:after {
         bottom: 85px;
     }
@@ -140,5 +141,8 @@
 @media (max-width: 1090px) {
     .footer.main {
         display: none;
+    }
+    .footer__inner.mobile {
+        display: flex;
     }
 }

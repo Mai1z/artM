@@ -2165,6 +2165,7 @@ body.fixed {
 .footer__inner.mobile {
   flex-direction: column;
   margin-top: 50px;
+  display: none;
 }
 
 .footer__inner.mobile:after {
@@ -2174,5 +2175,8 @@ body.fixed {
 @media (max-width: 1090px) {
   .footer.main {
     display: none;
+  }
+  .footer__inner.mobile {
+    display: flex;
   }
 }
