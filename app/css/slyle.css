@@ -1043,6 +1043,14 @@ header nav ul li a:hover {
   .buttons.main {
     display: none !important;
   }
+  .button.main {
+    height: 55px;
+  }
+  .form-submit {
+    display: flex;
+    margin-top: 30px;
+    flex-direction: column;
+  }
 }
 
 .buttons {
@@ -1640,6 +1648,10 @@ body.fixed {
     grid-auto-rows: 130px;
     margin-top: 20px;
     grid-column-gap: 30px;
+  }
+  .servise-list__items.serv {
+    grid-auto-rows: 80px;
+    margin-top: 40px;
   }
 }
 

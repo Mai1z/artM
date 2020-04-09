@@ -1099,6 +1099,14 @@ header nav ul li a:hover {
   .buttons.main {
     display: none!important;
   }
+  .button.main {
+    height: 55px;
+  }
+  .form-submit {
+      display: flex;
+      margin-top: 30px;
+      flex-direction: column;
+  }
 }
 
 .buttons {
