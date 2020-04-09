@@ -85,6 +85,12 @@ $('.main-servise__slider').slick({
   nextArrow: '.arrow-forward.serv',
 })
 
+// $('.main-servise__slider.portf').slick({
+//   slidesToShow: 4,
+//   prevArrow: '.arrow-back.serv',
+//   nextArrow: '.arrow-forward.serv',
+// })
+
 
 
 
@@ -207,7 +213,7 @@ $('.portfolio__slider2').slick({
   focusOnSelect: true,
   prevArrow: '.arrow-back.portfolio',
   nextArrow: '.arrow-forward.portfolio',
-  infinite: false,
+  infinite: true,
 });
 
 
@@ -220,7 +226,13 @@ $('.portfolio__slider2').slick({
 const slider = $('.index_page-container');
 const carret = $('.carret');
 const heightSlider = slider.height();
-const countPages = 4; // считать от нуля
+
+if( window.innerWidth >= 1090 ){
+  var countPages = 4; // считать от нуля
+} else {
+  var countPages = 5; // считать от нуля
+}
+// const countPages = 4; // считать от нуля
 const loop = false; //зациклить
 const animateDuration = 300;
 const fullAnimate = animateDuration * countPages / 3;

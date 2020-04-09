@@ -83,7 +83,8 @@ a {
 	text-decoration: none;
 	font-family: $main-font;
 	color: $main-font-color;
-	position: relative;
+  position: relative;
+  transition: 0.2s linear;
 		&:after {
 			content: '';
 			position: absolute;
@@ -92,7 +93,10 @@ a {
 			height: 2px;
 			background-color: $red-font-color;
 			bottom: -4px;
-		}
+    }
+    &:hover {
+      color: $red-font-color;
+    }
 }
 
 ul {
@@ -732,7 +736,8 @@ header nav ul li a:hover {
       flex-direction: column;
       color: $main-font-color;
         input {
-          background-color: transparent;
+          background-color: $main-bgcolor;
+          background: $main-bgcolor;
           border: none;
           border-bottom: 2px solid $red-font-color;
           outline: none;
@@ -776,19 +781,20 @@ header nav ul li a:hover {
 
 .form-submit {
   display: flex;
-  white-space: pre-wrap;
+  // white-space: pre-wrap;
   margin-top: 30px;
     button {
-      border: 3px solid $red-font-color;
-      background-color: transparent;
-      margin-right: 20px;
-      width: 100%;
+      // border: 3px solid $red-font-color;
+      // background-color: transparent;
+      // margin-right: 20px;
+      // width: 100%;
       max-width: 290px;
       font-size: 25px;
     }
     p {
       font-weight: normal;
       font-size: 15px;
+      white-space: pre-wrap;
     }
     a {
       font-size: 15px;
@@ -848,6 +854,41 @@ header nav ul li a:hover {
   right: 5px;
   top: 5px;
 
+}
+
+.footer.main-mobile {
+  margin-top: 70px;
+}
+
+.footer__inner.mobile {
+  margin-bottom: 75px;
+}
+
+.mobile-menu {
+  display: flex;
+  height: 58px;
+  width: 100%;
+  box-shadow: 0px -5px 4px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  bottom: -2px;
+  right: 0;
+  left: 0;
+  background-color: $main-bgcolor;
+  background: $main-bgcolor;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.mobile-menu__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid $main-font-color;
+  width: 40px;
+  height: 40px;
 }
 
 @media (max-width: 1490px) {
